@@ -1,0 +1,441 @@
+
+/* =====================================
+   ALANDI MAULI MAP - SIMPLE DESIGN
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #fff;
+    color: #292929;
+    line-height: 1.6;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+
+/* HEADER */
+
+.header {
+    min-height: 76px;
+    padding: 12px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #292929;
+}
+
+.brand-icon {
+    font-size: 31px;
+}
+
+.brand strong {
+    display: block;
+    font-size: 17px;
+    color: #c56b24;
+}
+
+.brand small {
+    display: block;
+    font-size: 10px;
+    color: #777;
+}
+
+.navigation {
+    display: flex;
+    gap: 25px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #555;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.navigation a:hover {
+    color: #d8792b;
+}
+
+
+/* HERO */
+
+.hero {
+    background: #fff5e9;
+    padding: 75px 7%;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 720px;
+    margin: auto;
+}
+
+.eyebrow {
+    color: #c56b24;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero h1 {
+    margin: 16px 0;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #d8792b;
+}
+
+.hero p {
+    max-width: 570px;
+    margin: 0 auto 25px;
+    color: #6e6e6e;
+    font-size: 14px;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background: #d8792b;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.primary-button:hover {
+    background: #b95e18;
+}
+
+
+/* COMMON SECTION */
+
+.places-section,
+.map-section,
+.about-section {
+    padding: 55px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.section-heading > span,
+.about-box > span {
+    color: #d8792b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section-heading h2,
+.about-box h2 {
+    margin: 7px 0;
+    font-size: 27px;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* PLACE CARDS */
+
+.place-cards {
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.place-card {
+    padding: 25px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 9px;
+    text-align: center;
+}
+
+.place-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.place-card h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.place-card p {
+    color: #777;
+    font-size: 12px;
+    min-height: 40px;
+}
+
+.place-card button {
+    margin-top: 15px;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 5px;
+    background: #fff0e2;
+    color: #b95e18;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.place-card button:hover {
+    background: #f9dfc8;
+}
+
+
+/* MAP SECTION */
+
+.map-section {
+    background: #fafafa;
+}
+
+.map-card {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.map-heading {
+    min-height: 65px;
+    padding: 12px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.map-heading strong {
+    display: block;
+    font-size: 14px;
+}
+
+.map-heading small {
+    display: block;
+    color: #888;
+    font-size: 11px;
+}
+
+.area-label {
+    padding: 6px 11px;
+    background: #fff0e2;
+    color: #b95e18;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* MAP ITSELF */
+
+#map {
+    width: 100%;
+    height: 520px;
+    background: #eee;
+    z-index: 1;
+}
+
+
+/* MAP LEGEND */
+
+.map-legend {
+    padding: 13px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 11px;
+}
+
+
+/* LEAFLET POPUP */
+
+.leaflet-popup-content-wrapper {
+    border-radius: 8px;
+}
+
+.leaflet-popup-content {
+    margin: 12px;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.simple-popup {
+    min-width: 170px;
+}
+
+.simple-popup h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.simple-popup p {
+    font-size: 11px;
+    color: #666;
+}
+
+.simple-popup a {
+    display: inline-block;
+    margin-top: 9px;
+    padding: 7px 11px;
+    background: #d8792b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+
+/* ABOUT */
+
+.about-section {
+    text-align: center;
+}
+
+.about-box {
+    max-width: 680px;
+    margin: auto;
+}
+
+.about-box p {
+    margin-top: 12px;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    padding: 30px 6%;
+    text-align: center;
+    background: #292929;
+    color: #fff;
+}
+
+.footer h3 {
+    font-size: 18px;
+}
+
+.footer p {
+    margin: 5px 0 12px;
+    color: #ddd;
+    font-size: 12px;
+}
+
+.footer small {
+    color: #aaa;
+    font-size: 10px;
+}
+
+
+/* MOBILE VIEW */
+
+@media (max-width: 650px) {
+
+    .header {
+        flex-direction: column;
+        padding: 14px 4%;
+    }
+
+    .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 17px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    .places-section,
+    .map-section,
+    .about-section {
+        padding: 38px 4%;
+    }
+
+    .section-heading h2,
+    .about-box h2 {
+        font-size: 23px;
+    }
+
+    .place-cards {
+        grid-template-columns: 1fr;
+    }
+
+    #map {
+        height: 430px;
+    }
+
+    .map-legend {
+        gap: 10px;
+    }
+}
+.simple-popup {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.simple-popup h2 {
+    color: #b45b18;
+    font-size: 17px;
+}
+
+.simple-popup h3 {
+    color: #b45b18;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.simple-popup p,
+.simple-popup li {
+    font-size: 13px;
+}
+
+.simple-popup a {
+    display: inline-block;
+    background: #df812e;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
